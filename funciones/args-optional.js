@@ -6,3 +6,4 @@
     const name = fullName('Alejo');
     console.log(name);
 })();
+//# sourceMappingURL=args-optional.js.map

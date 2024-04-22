@@ -6,3 +6,4 @@
     const Zoro = fullname('Zoro', 'Ronroroa', 'Mohihuara');
     console.log(Zoro);
 })();
+//# sourceMappingURL=args-rest.js.map

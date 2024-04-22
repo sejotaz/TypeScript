@@ -8,3 +8,4 @@
         return 'Batiseñal activada!';
     };
 })();
+//# sourceMappingURL=functions.js.map
