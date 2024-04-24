@@ -1,86 +1,60 @@
 "use strict";
 (() => {
-    class Mutante {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-        }
-    }
-    class Xmen extends Mutante {
-        savarElMundo() {
-            return 'Mundo salvado';
-        }
-    }
-    class Villian extends Mutante {
-        conquistarElMundo() {
-            return 'Mundo conquistado';
-        }
-    }
-    const wolverine = new Xmen('Wolverine', 'Logan');
-    const magneto = new Villian('Magneto', 'Magnus');
-    const printName = (character) => {
+    let personajes = {
+        name: 'Leon S Kennedy',
+        age: 36,
+        juegos: ['Resident Evil 2', 'Resident Evil 4', 'Resident Evil 6',]
     };
-    printName(wolverine);
-})();
-(() => {
-    class Avenger {
-        static getAvgAge() {
+    let bosses = {
+        name: 'Nemesis',
+        juegos: ['Resident Evil 3'],
+        getName() {
             return this.name;
         }
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-        }
-        bio() {
-            return `${this.name} (${this.team}!!)`;
-        }
-    }
-    Avenger.avgAge = 35;
+    };
 })();
 (() => {
-    class Avenger {
-        constructor(name, realName) {
+    class Mutant {
+        constructor(age, name, realName) {
+            this.age = age;
             this.name = name;
             this.realName = realName;
         }
-        getFullName() {
+        mutantPower(id) {
             return `${this.name} ${this.realName}`;
         }
     }
-    class Xmen extends Avenger {
-        constructor(name, realName, isMutant) {
-            super(name, realName);
-            this.isMutant = isMutant;
-        }
-        get gettFullName() {
-            return `${this.name} - ${this.realName}`;
-        }
-        set setfullName(name) {
-            this.name = name;
-        }
-        getFullDesdeXmen() {
-        }
-    }
-    const gambito = new Xmen('Gambito', 'Remy', true);
 })();
 (() => {
-    class OnePiece {
-        constructor(name) {
-            this.name = name;
+    const client = {
+        name: 'Alejo',
+        age: 24,
+        address: {
+            id: 154,
+            zip: 'MDE',
+            city: 'Belén'
+        },
+        getFullAdress(id) {
+            return this.address.city;
         }
-        static findOnePiece() {
-            if (!OnePiece.instance) {
-                OnePiece.instance = new OnePiece('Encontramos el ONE PIECE');
-            }
-            return OnePiece.instance;
+    };
+    const client2 = {
+        name: 'Sejotaz',
+        age: 24,
+        address: {
+            city: 'Caldas',
+            zip: 'CDA',
+            id: 784
+        },
+        getFullAdress(id) {
+            return this.address.city;
         }
-        changeName(newName) {
-            this.name = newName;
-        }
-    }
-    const onepiece = OnePiece.findOnePiece();
-    onepiece.changeName('ONE PIECE');
-    console.log(onepiece);
+    };
+})();
+(() => {
+    let addNumbers;
+    addNumbers = (a, b) => {
+        return 10;
+    };
 })();
 //# sourceMappingURL=Main.js.map

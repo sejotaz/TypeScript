@@ -29,6 +29,6 @@
   onepiece.changeName('ONE PIECE')
 
 
-  console.log(onepiece)
+  // console.log(onepiece)
 
 })()
